@@ -1,8 +1,8 @@
 """Add created_at column to Note
 
-Revision ID: 789ecfaebcf8
-Revises: 
-Create Date: 2025-04-05 14:40:41.881644
+Revision ID: f635545d1b2e
+Revises: 1a867b832806
+Create Date: 2025-04-08 00:27:21.477480
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '789ecfaebcf8'
-down_revision: Union[str, None] = None
+revision: str = 'f635545d1b2e'
+down_revision: Union[str, None] = '1a867b832806'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

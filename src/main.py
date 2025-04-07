@@ -1,9 +1,10 @@
 import argparse
-from database import engine, SessionLocal
-from models import Base, Note
+
+from src.database import engine, SessionLocal
+from src.models import Base, Note
 
 
-# Функция добавления заметок
+# Функция добавления заметок.
 def add_note(content: str):
     db = SessionLocal()
     new_note = Note(content=content)
@@ -13,7 +14,7 @@ def add_note(content: str):
     db.close()
 
 
-# Функция вывода всех заметок
+# Функция вывода всех заметок.
 def list_notes():
     db = SessionLocal()
     notes = db.query(Note).all()
@@ -26,7 +27,7 @@ def list_notes():
             print(note.content)
 
 
-# Определение аргументов получаемых из терминала
+# Определение аргументов получаемых из терминала.
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Программа для ведения заметок")
     parser.add_argument(
